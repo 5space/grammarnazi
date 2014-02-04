@@ -35,12 +35,12 @@ function handleText(textNode){
 		v = v.replace(dict[i].regexp, function(match, p1, offset, string) {
 			var replacementText 
 			// if replacment2 exists and 50% chance use replacement2
-			if(typeof dict[i].replacement2 != 'undefined' && Math.random() < 0.5) replacementText = dict[i].replacement2;
+			if(typeof dict[i].replacement2 != "undefined" && Math.random() < 0.5) replacementText = dict[i].replacement2;
 			else replacementText = dict[i].replacement1;
 			if(p1.length > 0 && p1 === p1.toUpperCase()){
 				replacementText = replacementText.charAt(0).toUpperCase() + replacementText.slice(1);
 			}
-			if(typeof dict[i].skip != 'undefined') i += skip;
+			if(typeof dict[i].skip != "undefined") i += dict[i].skip;
 			return replacementText;
 		});
 		textNode.nodeValue = v;
