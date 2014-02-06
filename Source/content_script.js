@@ -47,7 +47,7 @@ function handleText(textNode){
 	}
 }
 
-function wordPair(regexp, replacement1, replacement2, skip){
+function wordPair(regexp, replacement1, skip, replacement2){
 	this.regexp=regexp;
 	this.replacement1=replacement1;
 	this.replacement2=replacement2;
@@ -56,9 +56,9 @@ function wordPair(regexp, replacement1, replacement2, skip){
 
 function getDictionary(){
 	var dictionary = new Array();
-	dictionary.push(new wordPair(/\b(T|t)hey're\b/g, "their", "there", 2));
-	dictionary.push(new wordPair(/\b(T|t)heir\b/g, "they're", "there", 1));
-	dictionary.push(new wordPair(/\b(T|t)here\b/g, "they're", "their"));
+	dictionary.push(new wordPair(/\b(T|t)hey're\b/g, "their", 2, "there"));
+	dictionary.push(new wordPair(/\b(T|t)heir\b/g, "they're", 1, "there"));
+	dictionary.push(new wordPair(/\b(T|t)here\b/g, "they're", 0, "their"));
 	dictionary.push(new wordPair(/\b(Y|y)our\b/g, "you're", 1));
 	dictionary.push(new wordPair(/\b(Y|y)ou're\b/g, "your"));
 	dictionary.push(new wordPair(/\b(R|r)egardless\b/g, "irregardless"));
