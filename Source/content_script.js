@@ -67,7 +67,7 @@ function getDictionary(){
 	dictionary.push(new wordPair(/\b(T|t)hen\b/g, "than", 1));
 	dictionary.push(new wordPair(/\b(T|t)han\b/g, "then"));
 	dictionary.push(new wordPair(/\b(S|s)hould have\b/g, "should of"));
-	dictionary.push(new wordPair(/\b(W|w)hould have\b/g, "whould of"));
+	dictionary.push(new wordPair(/\b(W|w)ould have\b/g, "would of"));
 	dictionary.push(new wordPair(/\b(C|c)ould have\b/g, "could of"));
 	dictionary.push(new wordPair(/\b(E|e)ffect\b/g, "affect", 1));
 	dictionary.push(new wordPair(/\b(A|a)ffect\b/g, "effect"));
